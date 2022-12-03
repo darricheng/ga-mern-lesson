@@ -16,6 +16,7 @@ const {
   findAll: findAllShow,
   updateOne: updateOneShow,
   deleteOne: deleteOneShow,
+  findOne: findOneShow,
 } = require("../controllers/show-controller");
 
 // Middleware
@@ -31,6 +32,7 @@ app.delete("/comedians/:id", deleteOne);
 app.post("/shows", createShow);
 app.get("/shows", findAllShow);
 
+app.get("/show/:id", findOneShow);
 app.put("/shows/:id", updateOneShow);
 app.delete("/shows/:id", deleteOneShow);
 
