@@ -4,6 +4,7 @@
 
 const express = require("express");
 const app = express();
+
 const {
   create,
   findAll,
@@ -39,6 +40,6 @@ app.delete("/shows/:id", deleteOneShow);
 app.use(express.static("public")); // ADD THIS & create a folder "public"
 
 // Start server
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
   console.log("Listening to port 3000...");
 });
